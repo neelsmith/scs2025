@@ -1,0 +1,423 @@
+---
+engine: julia
+title: A Digital Complutensian Polyglot Bible
+author: 
+    - name: Neel Smith
+      affiliation:
+        - name: Dept. of Classics, College of the Holy Cross
+    - name: Ashley Terjanian
+      affiliation:
+        - name: College of the Holy Cross '26    
+format: 
+    revealjs:
+        theme: [default]
+        navigation-mode: vertical
+        footer: "Ancient Maker Spaces (SCS, Philadelphia, 2025)"
+        css: custom.css
+  
+
+---
+
+
+# Context and questions
+
+
+- new major at Holy Cross: any two ancient Mediterranean languages
+- community with different background and skills
+
+
+## Questions
+
+- welcoming to new comers and advanced scholars
+- multilingual reading?
+- what difference does digital make?
+
+# Outline
+
+1. Reading the Complutensian Bible
+2. Designing a digital polygot Bible
+3. Demos: exploring a digital polyglot
+4. Demo: presenting a digital polyglot
+
+# (1) Reading the Complutensian Bible
+
+Editors' goals:
+
+- accessible
+- useful for innovative research
+
+
+## Tour of a page: four texts
+
+
+
+
+![Texts in four languages](./imgs/four-texts.png)
+
+## Glossing commentary
+
+![Interlinear glosses (Septuagint)](./imgs/interlinear-sept-hilited.jpeg)
+
+![Adjacent glosses (Targum Onkelos)](./imgs/adjacent-targum-hilited.jpeg)
+
+
+## Indexing and lemmatization
+
+
+![Glossing by indexing Vulgate to Hebrew, plus link to lemma](./imgs/index-latin-hebrew.png)
+
+
+## Lexicon
+
+![Article keyed by lemma](./imgs/caput1-hilited.jpeg)
+
+![Concordance by senses](./imgs/initium.jpg)
+
+## Keeping text aligned
+
+![Spacing markers in Hebrew text](./imgs/Hebrew-whitespace.png)
+
+
+
+
+
+## 
+![Spacing markers in Latin text](./imgs/Latin-whitespace.png)
+
+## Volumes 1-4
+
+
+- Volume 1: Torah (including Targum Onkelos)
+- Volumes 2-4: remainder of Hebrew Bible (following order of books in Vulgate)
+
+
+## Volume 5: contents
+
+
+- Text of New Testament (with Pauline prefaces)
+- Greek grammar
+- Greek vocabulary
+- etymologies of proper names
+- journeys of Paul
+
+## Volume 6: contents
+
+- Hebrew lexicon
+- Hebrew grammar
+- Reverse index of Latin words to the Hebrew lexicon
+- Alternate forms of names
+- Etymologies of names
+
+## Etymology of names
+
+![Alphabetized by Latin form](./imgs/name-index.png)
+
+
+## Lexicon
+
+
+![Beginning of entry](./imgs/lexicon-entry.png)
+
+![Folios identified by number](./imgs/lexicon-folio-num.png)
+
+
+
+
+## Latin index to lexicon
+
+![Latin words indexed to folio reference in lexicon](./imgs/latin-index-hilited.jpeg)
+
+## 
+
+
+![**Bellum** on folio 83](./imgs/find-bellum-on-f83.jpeg)
+
+##
+
+
+
+![Volume 6: quire analysis](./imgs/quire-analysis.png)
+
+
+## Respect for Greek and Hebrew texts
+
+![Note that **Third Maccabees** is not in the Vulgate](./imgs/maccabees3.jpg)
+
+## Goals
+
+
+1. A library insisting on necessity of multilingual reading
+2. numerous aids for beginners
+3. sophisticated indexing for scholars
+
+
+
+# (2) Designing a digital polygot Bible
+
+
+
+## A "small-digital" approach
+
+- exploratory
+- minimal technical prerequisites
+- can be developed by a small team or individual
+- easily shared and replicated:
+    - licensing
+    - documentation
+
+
+## Reusing existing resources
+
+- images (National Library of Spain)
+- texts of Hebrew Bible, Septuagint, Vulgate, Targum Onkelos (ebible.org, www.sefaria.org)
+- Hebrew morphological annotations (Open Scriptures Hebrew Bible, Sefaria)
+- digital lexica
+
+
+## Principles for digital resources
+
+
+- openly licensed
+- in simple plain-text formats
+- data canonically identified
+
+
+
+## Platforms for exploring and sharing
+
+
+::: {.callout-tip title="We'll demo each of these!"}
+:::
+
+- reactive Pluto notebooks
+- multi-format documents in Quarto
+- Julia REPL
+
+
+## Reusing resources: texts
+
+Align by canonical reference in Pluto:
+
+![](./imgs/nb-aligned-passages.png)
+
+
+
+## New data sets we're creating
+
+::: {.callout-tip title="We'll demo each of these!"}
+:::
+
+
+- (**A**) IIIF manifests for digital images
+- (**B**) Complete quire analysis
+- (**C**) editions of Latin glosses
+- (**D**) corpus-specific morphology for Greek, Latin texts
+- (**E**) alignments of verbal functions in Hebrew, Greek, Latin    
+
+
+
+
+
+# (3) Demos: exploring a digital polyglot
+
+
+
+
+## (**A**) IIIF manifests
+
+
+![](./imgs/nb-image-browser.png)
+
+
+## (**B**) Complete quire analysis
+
+::: {.callout-tip title="Demo"}
+
+- navigate images by physical structure
+- navigate physical structure by text reference
+:::
+
+
+
+## (**C**) New editions of Latin glosses
+
+
+::: {.callout-tip title="Demo"}
+
+- validate XML structure in VS Code
+- validate completeness and accuracy of editing in Pluto
+:::
+
+- TEI XML (Text Encoding Initiative)
+- canonically citable by URN
+- indexed to:
+    - citable source images
+    - citable pages
+
+
+
+
+
+
+##  **(D)** Morphological analysis
+
+*Hebrew*: use existing resources from OSHB, Sefaria
+
+*Latin, Greek*: develop corpus with *Tabulae* system and *Kanones* system:
+
+- morphology tailored to corpus
+- identifiers for lexemes
+- object model of morphological forms
+
+
+## Morphological analysis
+
+
+![](./imgs/nb-greek-morphology.png)
+
+
+## Morphological search 
+
+
+
+::: {.callout-tip title="Demo"}
+
+- uses lemmatization from Sefaria
+- coordinates IDs with BDB lexicon
+
+:::
+
+
+[](./imgs/hebrew-verbs.png)
+
+
+
+## **(E)** Cross-lingual alignments
+
+- delimited text tables
+- canonically identified passages
+- canonically identified lexemes
+
+
+
+
+
+
+## Pluto: comparing vocabulary
+
+![Comparison of string tokens in Latin documents for *Genesis* 30.6](./imgs/glossing-vocab.png)
+
+
+## Pluto: aligning Latin verbs
+
+![Aligning Latin *creo*](./imgs/nb-align-verbs.png)
+
+
+## Using AI to align syntax
+
+::: {.callout-important title="TBA"}
+Need to add slides about using AI:
+
+1. in interactive "converstation"
+2. systematically from an API 
+3. in Pluto notebook together with lexicon
+
+:::
+
+
+## Pluto: aligning Latin verbs
+
+![Aligning Latin *creo*](./imgs/nb-align-verbs.png)
+
+
+## Augmenting small digital with AI
+
+- morphological parsing and alignment
+- editing?
+
+## Current AIs (Nov. 2024)
+
+*Can*
+
+- accurately automate cross-lingual alignment
+
+but *cannot*
+
+- associate lexemes with abstract identifiers like URNs
+
+
+and *do*
+
+- hallucinate morphologically based searching
+
+## Good results in focused conversations
+
+> Can we automate this x 400,000 conversations?
+
+
+::: {.callout-tip title="We'll demo this!"}
+:::
+
+
+
+## Hybrid strategy
+
+- collect alignments from AI
+- manage associations of headwords with identifiers
+- continue to manage indexing of morphological analyses to tokens
+
+
+
+
+# (4) Presenting digital scholarship
+
+::: {.callout-tip title="Quarto in VS Code"}
+:::
+
+Quarto:
+
+- text (in Markdown) + executable code
+- multiple output formats 
+
+
+# Acknowledgments
+
+
+- The Weiss Summer Research Program at Holy Cross
+
+
+# Thank you!
+
+
+
+
+*More info*: 
+
+
+
+![https://neelsmith.quarto.pub/digitalcomplutensian](./imgs/digcomp-qr.png)
+
+*Contact*:
+
+`nsmith@holycross.edu`
+
+`anterj26@g.holycross.edu`
+
+
+
+
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js""></script>
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('body').prepend('<div class=\"zoomDiv\"><img src=\"\" class=\"zoomImg\"></div>');
+    // onClick function for all plots (img's)
+    $('img:not(.zoomImg)').click(function() {
+      $('.zoomImg').attr('src', $(this).attr('src')).css({width: '100%'});
+      $('.zoomDiv').css({opacity: '1', width: 'auto', border: '1px solid white', borderRadius: '5px', position: 'fixed', top: '50%', left: '50%', marginRight: '-50%', transform: 'translate(-50%, -50%)', boxShadow: '0px 0px 50px #888888', zIndex: '50', overflow: 'auto', maxHeight: '100%'});
+    });
+    // onClick function for zoomImg
+    $('img.zoomImg').click(function() {
+      $('.zoomDiv').css({opacity: '0', width: '0%'}); 
+    });
+  });
+</script>

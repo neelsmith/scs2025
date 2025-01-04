@@ -1,0 +1,6 @@
+scratch/
+*docx
+*pdf
+*odt
+*html
+.DS_Store
