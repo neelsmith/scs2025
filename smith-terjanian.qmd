@@ -194,9 +194,9 @@ Editors' goals:
 - Julia REPL
 
 
-## Reusing resources: texts
+## Example of reusing resources: texts
 
-Align by canonical reference in Pluto:
+A Pluto notebook aligning texts by canonical reference:
 
 ![](./imgs/nb-aligned-passages.png)
 
@@ -313,33 +313,18 @@ Align by canonical reference in Pluto:
 ![Aligning Latin *creo*](./imgs/nb-align-verbs.png)
 
 
-## Using AI to align syntax
+## In 2025: using LLMs for morphological and syntactic analysis
 
-::: {.callout-important title="TBA"}
-Need to add slides about using AI:
+- not envisioned when project began 12 months ago
+- in 2025, can't imagine project without it
 
-1. in interactive "converstation"
-2. systematically from an API 
-3. in Pluto notebook together with lexicon
-
-:::
+## Current LLMs ...
 
 
-## Pluto: aligning Latin verbs
+*can*
 
-![Aligning Latin *creo*](./imgs/nb-align-verbs.png)
-
-
-## Augmenting small digital with AI
-
-- morphological parsing and alignment
-- editing?
-
-## Current AIs (Nov. 2024)
-
-*Can*
-
-- accurately automate cross-lingual alignment
+- reliably lemmatize historical languages
+- accurately align features across Greek, Latin, Hebrew
 
 but *cannot*
 
@@ -348,28 +333,50 @@ but *cannot*
 
 and *do*
 
-- hallucinate morphologically based searching
+- hallucinate morphologically based searching over large corpora
 
-## Good results in focused conversations
+## Augmenting small digital with "user-in-the-loop" work flow
 
-> Can we automate this x 400,000 conversations?
 
+LLMs generate *hypotheses*:
+
+- for corpus-specific parsers
+- for aligning features across languages
+
+Evaluations:
+
+- 
+- manage projection across large data sets
+
+
+
+## An interactive example
 
 ::: {.callout-tip title="We'll demo this!"}
 :::
 
-
-
-## Hybrid strategy
-
-- collect alignments from AI
-- manage associations of headwords with identifiers
-- continue to manage indexing of morphological analyses to tokens
+## Via an API
 
 
 
+::: {.callout-tip title="We'll demo this"}
 
-# (4) Presenting digital scholarship
+- API calls from a Pluto notebook
+- coordinate ChatGPT response with selection from Lewis-Short
+
+:::
+
+
+- automate this ✕ 52,000 to get all of Lewis-Short
+
+## Conclusions on LLMs
+
+
+- extracting latent information from extant rich digital resources is a good match with small digital!
+
+
+
+# (4) Demo: presenting digital scholarship
 
 ::: {.callout-tip title="Quarto in VS Code"}
 :::
@@ -380,6 +387,11 @@ Quarto:
 - multiple output formats 
 
 
+# Aspirations
+
+- example for our department? or others?
+
+
 # Acknowledgments
 
 
@@ -387,7 +399,6 @@ Quarto:
 
 
 # Thank you!
-
 
 
 
