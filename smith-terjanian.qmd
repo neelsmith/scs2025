@@ -345,7 +345,7 @@ LLMs generate *hypotheses*:
 
 Evaluations:
 
-- 
+- algorithmically verify results
 - manage projection across large data sets
 
 
